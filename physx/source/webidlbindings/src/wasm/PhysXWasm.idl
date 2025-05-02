@@ -3753,6 +3753,7 @@ interface Vector_PxU16 {
     unsigned long size();
     void push_back(unsigned short value);
     void clear();
+    void setFromBuffer(VoidPtr buffer, unsigned long size);
 };
 
 interface Vector_PxU32 {
@@ -3763,6 +3764,7 @@ interface Vector_PxU32 {
     unsigned long size();
     void push_back(unsigned long value);
     void clear();
+    void setFromBuffer(VoidPtr buffer, unsigned long size);
 };
 
 interface Vector_PxU8 {
@@ -3783,6 +3785,7 @@ interface Vector_PxVec3 {
     unsigned long size();
     void push_back([Ref] PxVec3 value);
     void clear();
+    void setFromBuffer(VoidPtr buffer, unsigned long size);
 };
 
 interface Vector_PxVec4 {
