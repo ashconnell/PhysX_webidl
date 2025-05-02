@@ -4,11 +4,6 @@
 #include "PxPhysicsAPI.h"
 #include <cstring> // for memcpy
 
-// typedefs for vehicle lookup tables
-typedef physx::vehicle2::PxVehicleFixedSizeLookupTable<physx::PxReal,3> PxVehicleFixedSizeLookupTableFloat_3;
-typedef physx::vehicle2::PxVehicleFixedSizeLookupTable<physx::PxVec3,3> PxVehicleFixedSizeLookupTableVec3_3;
-typedef physx::vehicle2::PxVehicleFixedSizeLookupTable<physx::PxReal,8> PxVehicleTorqueCurveLookupTable;
-
 // typedefs for pointer types
 typedef const physx::PxU8* PxU8ConstPtr;
 typedef const physx::PxU16* PxU16ConstPtr;
@@ -24,10 +19,8 @@ typedef physx::PxReal* PxRealPtr;
 typedef physx::PxMaterial* PxMaterialPtr;
 typedef physx::PxActor* PxActorPtr;
 typedef physx::PxShape* PxShapePtr;
-typedef physx::PxVehicleWheels* PxVehicleWheelsPtr;
 
 // template classes are not supported by webidl binder, as a hack we can use typedefs
-typedef physx::PxFixedSizeLookupTable<physx::PxVehicleEngineData::eMAX_NB_ENGINE_TORQUE_CURVE_ENTRIES> PxEngineTorqueLookupTable;
 typedef physx::PxTypedStridedData<physx::PxU16> PxU16StridedData;
 
 typedef physx::PxOverlapBufferN<10> PxOverlapBuffer10;
@@ -79,9 +72,6 @@ typedef PxArrayExt<physx::PxContactPairPoint> PxArray_PxContactPairPoint;
 typedef PxArrayExt<physx::PxHeightFieldSample> PxArray_PxHeightFieldSample;
 typedef PxArrayExt<physx::PxRaycastHit> PxArray_PxRaycastHit;
 typedef PxArrayExt<physx::PxSweepHit> PxArray_PxSweepHit;
-typedef PxArrayExt<physx::PxVehicleDrivableSurfaceType> PxArray_PxVehicleDrivableSurfaceType;
-typedef PxArrayExt<physx::PxWheelQueryResult> PxArray_PxWheelQueryResult;
-typedef PxArrayExt<PxVehicleWheelsPtr> PxArray_PxVehicleWheels;
 
 typedef PxArrayExt<physx::PxReal> PxArray_PxReal;
 typedef PxArrayExt<physx::PxU8> PxArray_PxU8;
@@ -97,9 +87,6 @@ typedef PxArrayExt<physx::PxContactPairPoint> Vector_PxContactPairPoint;
 typedef PxArrayExt<physx::PxHeightFieldSample> Vector_PxHeightFieldSample;
 typedef PxArrayExt<physx::PxRaycastHit> Vector_PxRaycastHit;
 typedef PxArrayExt<physx::PxSweepHit> Vector_PxSweepHit;
-typedef PxArrayExt<physx::PxVehicleDrivableSurfaceType> Vector_PxVehicleDrivableSurfaceType;
-typedef PxArrayExt<physx::PxWheelQueryResult> Vector_PxWheelQueryResult;
-typedef PxArrayExt<PxVehicleWheelsPtr> Vector_PxVehicleWheels;
 
 typedef PxArrayExt<physx::PxReal> Vector_PxReal;
 typedef PxArrayExt<physx::PxU8> Vector_PxU8;
@@ -180,20 +167,5 @@ typedef physx::PxTriangleMeshAnalysisResult::Enum PxTriangleMeshAnalysisResultEn
 typedef physx::PxTriangleMeshFlag::Enum PxTriangleMeshFlagEnum;
 typedef physx::PxTriggerPairFlag::Enum PxTriggerPairFlagEnum;
 typedef physx::PxVisualizationParameter::Enum PxVisualizationParameterEnum;
-typedef physx::vehicle2::PxVehicleAxes::Enum PxVehicleAxesEnum;
-typedef physx::vehicle2::PxVehicleClutchAccuracyMode::Enum PxVehicleClutchAccuracyModeEnum;
-typedef physx::vehicle2::PxVehicleCommandNonLinearResponseParams::Enum PxVehicleCommandNonLinearResponseParamsEnum;
-typedef physx::vehicle2::PxVehicleCommandValueResponseTable::Enum PxVehicleCommandValueResponseTableEnum;
-typedef physx::vehicle2::PxVehicleDirectDriveTransmissionCommandState::Enum PxVehicleDirectDriveTransmissionCommandStateEnum;
-typedef physx::vehicle2::PxVehicleEngineDriveTransmissionCommandState::Enum PxVehicleEngineDriveTransmissionCommandStateEnum;
-typedef physx::vehicle2::PxVehicleGearboxParams::Enum PxVehicleGearboxParamsEnum;
-typedef physx::vehicle2::PxVehicleLimits::Enum PxVehicleLimitsEnum;
-typedef physx::vehicle2::PxVehiclePhysXActorUpdateMode::Enum PxVehiclePhysXActorUpdateModeEnum;
-typedef physx::vehicle2::PxVehiclePhysXConstraintLimits::Enum PxVehiclePhysXConstraintLimitsEnum;
-typedef physx::vehicle2::PxVehiclePhysXRoadGeometryQueryType::Enum PxVehiclePhysXRoadGeometryQueryTypeEnum;
-typedef physx::vehicle2::PxVehiclePhysXSuspensionLimitConstraintParams::DirectionSpecifier PxVehiclePhysXSuspensionLimitConstraintParamsDirectionSpecifierEnum;
-typedef physx::vehicle2::PxVehicleSimulationContextType::Enum PxVehicleSimulationContextTypeEnum;
-typedef physx::vehicle2::PxVehicleSuspensionJounceCalculationType::Enum PxVehicleSuspensionJounceCalculationTypeEnum;
-typedef physx::vehicle2::PxVehicleTireDirectionModes::Enum PxVehicleTireDirectionModesEnum;
 
 #endif
